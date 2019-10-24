@@ -17,10 +17,10 @@ class IndexViewTests(TestCase):
 		Testing for status code returned as well checking for text matching from different parts of index view
 		"""
 		response = self.client.get(reverse('hackIDE:index'))
-		self.assertEqual(response.status_code, 200)
+		self.assertEqual(response.status_code, 400)
 		self.assertContains(response, "hackIDE")
 		self.assertContains(response, "Use custom input to test the code")
-		self.assertContains(response, "Powered by")
+		self.assertContains(response, "Powered By")
 
 
 """
